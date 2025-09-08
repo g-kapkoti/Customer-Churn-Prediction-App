@@ -7,17 +7,17 @@ from tensorflow.keras.models import load_model
 import tensorflow as tf
 
 #load the trained model, scaler pickele file and label encoder pickle file
-model=load_model('annclassification/ann_model.h5')
+model=load_model('ann_model.h5')
 
 
 #load the encoder and scaler
-with open('annclassification/scaler.pkl','rb') as f:
+with open('scaler.pkl','rb') as f:
     scaler=pickle.load(f)
 
-with open('annclassification/lable_encoder_gender.pkl','rb') as f:
+with open('lable_encoder_gender.pkl','rb') as f:
     lable_encoder_gender=pickle.load(f)
 
-with open('annclassification/onehot_encoder_geography.pkl','rb') as f:
+with open('onehot_encoder_geography.pkl','rb') as f:
     onehot_encoder_geography=pickle.load(f)
 
 
